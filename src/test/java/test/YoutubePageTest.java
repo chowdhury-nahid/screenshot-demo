@@ -19,6 +19,8 @@ public class YoutubePageTest {
 
     String projectPath = System.getProperty("user.dir");
     private static WebDriver driver = null;
+    String testUrl = "https://www.youtube.com/";
+
     @BeforeSuite
     public void setUp()  {
         System.setProperty("webdriver.chrome.driver", projectPath + "/drivers/chromedriver.exe");
@@ -26,8 +28,6 @@ public class YoutubePageTest {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.manage().window().maximize();
     }
-
-    String testUrl = "https://www.youtube.com/";
 
     @Test
     public void verifyStartButton() throws InterruptedException, IOException {
